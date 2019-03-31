@@ -17,6 +17,7 @@ object Day9 {
   }
 
   def solve(numPlayers: Int, lastMarble: Int): Int = {
+    // todo: looks like the Josephus problem, probably has either a DP or closed form solution
     val playerScores = new Array[Int](numPlayers)
     val marbles = ArrayBuffer[Int](0)
     var currentMarbleIndex = 0
