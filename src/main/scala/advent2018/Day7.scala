@@ -23,7 +23,7 @@ object Day7 {
       val toAdd = graph(node)
         .filterNot(visited) // not visited
         .filterNot(it => q.exists(_ == it)) // not in the queue
-        .filter(prerequisites(_).forall(visited.contains)) // all prerequisites satisfied
+        .filter(c => prerequisites(c).forall(visited.contains)) // all prerequisites satisfied
       q.enqueue(toAdd: _*)
     }
     println(result.mkString)
